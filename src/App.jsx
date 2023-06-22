@@ -24,9 +24,9 @@ const App = () => {
       const detail = () =>{
         response.json().then((user)=>{
           setLocation(user[0]);
-          if(state===true){
-            setDisplay(user[0])
-          }else(null)
+          // if(state===true){
+          //   setDisplay(user[0])
+          // }else(null)
             const weatherInfo = async () =>{
               const api = `https://api.openweathermap.org/data/2.5/weather?lat=${user[0].lat}&lon=${user[0].lon}&units=metric&appid=3cb7568d2de1615d52850688d119a6a0`
               const res = await fetch(api);
